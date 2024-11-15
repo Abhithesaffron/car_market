@@ -1,0 +1,208 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background image for the whole app */
+body {
+  background-image: url('https://images.pexels.com/photos/1534604/pexels-photo-1534604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace with your own image URL */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-attachment: fixed; /* Ensures background image doesn't scroll with content */
+}
+
+/* Center the main content */
+.app-container {
+  background: none; /* Slight transparency to contrast with background */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Title styling */
+.app-title {
+  font-size: 3.5rem; /* Increased for better visibility */
+  color: #fff; /* Make the title stand out more on the background */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better readability */
+}
+
+/* Buttons styling */
+.button-container {
+  margin-bottom: 40px;
+}
+
+.nav-button {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 22px; /* Increase padding for better clickability */
+  font-size: 1.3rem; /* Increase font size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 220px;
+}
+
+.nav-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85); /* Slightly transparent background for contrast */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.1rem; /* Slightly larger input font size for better readability */
+  color: #333;
+}
+
+button[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  padding: 14px 22px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Dashboard Styling */
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%; /* Ensures full width for dashboard container */
+  padding: 20px 0;
+  flex-wrap: wrap; /* Allow wrapping if space is constrained */
+  justify-content: center; /* Center the items on the screen */
+}
+
+.dashboard-container h3 {
+  font-size: 1.8rem; /* Increased font size for better visibility */
+  margin-bottom: 20px;
+  flex-basis: 100%; /* Make sure the title doesn't affect chart layout */
+  text-align: center;
+  color: #fff; /* Increased contrast for the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+}
+
+.dashboard-container .pie-chart {
+  width: 100%;
+  max-width: 400px; /* Decreased chart size */
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .app-title {
+    font-size: 2.8rem; /* Slightly smaller on mobile for better fit */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-button {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* Form Layout */
+  form {
+    padding: 20px;
+    width: 100%;
+  }
+
+  input, button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Dashboard Layout */
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-container .pie-chart {
+    margin-bottom: 40px;
+    max-width: 80%;
+  }
+
+  .dashboard-container h3 {
+    font-size: 1.6rem; /* Decrease title font size on mobile */
+  }
+}
+
+/* For large screens (larger than 1200px) */
+@media (min-width: 1200px) {
+  .app-container {
+    padding: 60px;
+  }
+
+  .nav-button {
+    width: 220px;
+  }
+
+  form {
+    padding: 40px;
+  }
+
+  /* Dashboard Layout */
+  .dashboard-container {
+    gap: 40px;
+  }
+
+  .dashboard-container .pie-chart {
+    max-width: 350px; /* Further decrease chart size */
+  }
+
+  .dashboard-container h3 {
+    font-size: 2rem; /* Increase title font size slightly */
+  }
+}
